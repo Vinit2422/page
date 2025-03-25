@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio | Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/video-player.css">
+</head>
+<body class="projects-page">
+    <div class="theme-toggle">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <div class="logo-circle">AS</div>
+            </a>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="projects.html" class="active">PROJECTS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="resume.html">RESUME</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>Explore my portfolio of 2D/3D animations, VFX, motion graphics, and artistic creations</p>
+        </div>
+    </header>
+
+    <!-- Video Showcase Section -->
+    <section class="video-showcase">
+        <div class="container">
+            <div class="video-player-container">
+                <div class="custom-video-player" id="customVideoPlayer">
+                    <div class="video-container">
+                        <video id="projectVideo" poster="projects/Animation/A1_Sanghvi_Vinit_Final.mov" preload="metadata">
+                            <source src="projects/Animation/A1_Sanghvi_Vinit_Final.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-title"></div>
+                        <div class="video-navigation">
+                            <button class="nav-prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="nav-next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="video-controls">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-filled"></div>
+                                </div>
+                            </div>
+                            <div class="controls-row">
+                                <div class="left-controls">
+                                    <button class="play-pause-btn">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <div class="volume-container">
+                                        <button class="volume-btn">
+                                            <i class="fas fa-volume-up"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h2 id="projectTitle">3D Animation</h2>
+                    <p id="projectDescription">Discover the artistry of this expertly crafted 3D animation, where cutting-edge technology meets creative storytelling. With fluid motion, intricate detailing, and compelling visual effects, each frame offers a seamless narrative experience</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Category:</span>
+                            <span id="projectCategory">3D Animation</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Software:</span>
+                            <span id="projectSoftware">Maya, Blender</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label"></span>
+                            <select id="videoSelectionDropdown" class="video-selection-dropdown">
+                                <!-- Video options will be dynamically populated -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Preview List -->
+                <div class="project-preview-section">
+                    <h3>Available Projects</h3>
+                    <div class="project-preview-list" id="videoPreviewList">
+                        <!-- Project previews will be dynamically populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Selector -->
+            <div class="project-selector">
+                <h3>Project Categories</h3>
+                <div class="project-thumbnails">
+                    <div class="project-thumb" data-project="1" data-category="2d-animation">
+                        <div class="thumb-overlay">
+                            <h4>2D Animation</h4>
+                            <p>Traditional and Digital 2D Animations</p>
+                        </div>
+                    </div>
+                    <div class="project-thumb active" data-project="2" data-category="3d-animation">
+                        <div class="thumb-overlay">
+                            <h4>3D Animation</h4>
+                            <p>Character and Scene Animations</p>
+                        </div>
+                    </div>
+                    <div class="project-thumb" data-project="3" data-category="lighting-texturing">
+                        <div class="thumb-overlay">
+                            <h4>Lighting & Texturing</h4>
+                            <p>3D Visual Development</p>
+                        </div>
+                    </div>
+                    <div class="project-thumb" data-project="4" data-category="sketches">
+                        <div class="thumb-overlay">
+                            <h4>Sketches</h4>
+                            <p>Traditional Art & Illustrations</p>
+                        </div>
+                    </div>
+                    <div class="project-thumb" data-project="5" data-category="vfx-motion">
+                        <div class="thumb-overlay">
+                            <h4>VFX & Motion Graphics</h4>
+                            <p>Visual Effects & Motion Design</p>
+                        </div>
+                    </div>
+                    <div class="project-thumb" data-project="6" data-category="Digital-art-works">
+                        <div class="thumb-overlay">
+                            <h4>Digital Art</h4>
+                            <p>Digital Illustrations & Designs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                        <circle cx="20" cy="20" r="18" fill="var(--primary-color)" />
+                        <text x="20" y="25" font-size="14" text-anchor="middle" fill="var(--bg-color)">A.S</text>
+                    </svg>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.artstation.com/vinitsanghvi5" class="social-icon"><i class="fab fa-artstation"></i></a>
+                    <a href="https://vimeo.com/library" class="social-icon"><i class="fab fa-vimeo"></i></a>
+                    <a href="www.linkedin.com/in/vinit-sanghvi-a9aa9223a" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer-navigation">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; <span id="year">2025</span> Vinit Sanghvi. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/project-selector.js"></script>
+    <script src="js/video-player.js"></script>
+    <script>
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

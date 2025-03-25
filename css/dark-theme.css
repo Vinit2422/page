@@ -1,0 +1,174 @@
+/*
+ * Dark Theme Styles for CG Artist Portfolio
+ */
+
+ body.dark-theme {
+    --bg-color: #121212;
+    --bg-color-rgb: 18, 18, 18;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --border-color: #2c2c2c;
+    --border-color-rgb: 44, 44, 44;
+    --muted-color: #a0a0a0;
+    --overlay-bg: rgba(0, 31, 34, 0.85);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --highlight-color: rgba(15, 164, 175, 0.2);
+}
+
+body.dark-theme .navbar.scrolled {
+    background-color: rgba(var(--bg-color-rgb), 0.85);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(var(--border-color-rgb), 0.2);
+}
+
+body.dark-theme .nav-links li a {
+    color: #ffffff;
+}
+
+body.dark-theme .theme-toggle {
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(150, 71, 52, 0.4);
+}
+
+body.dark-theme .theme-toggle:hover {
+    background-color: var(--primary-color);
+}
+
+body.dark-theme .menu-toggle {
+    color: #ffffff;
+}
+
+body.dark-theme .skill-card {
+    background-color: #1a1a1a;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .skill-icon {
+    background-color: rgba(15, 164, 175, 0.15);
+    box-shadow: 0 5px 15px rgba(15, 164, 175, 0.1);
+}
+
+body.dark-theme .featured-work {
+    background-color: #171717;
+}
+
+body.dark-theme .page-header,
+body.dark-theme .expertise,
+body.dark-theme .resume-header,
+body.dark-theme .contact {
+    background-color: #171717;
+}
+
+body.dark-theme .timeline-content {
+    background-color: #1a1a1a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-theme .award-item {
+    background-color: #1a1a1a;
+}
+
+body.dark-theme .footer {
+    background-color: #0a0a0a;
+}
+
+/* Enhanced Video Player Dark Theme Styles */
+body.dark-theme .custom-video-player {
+    background-color: #1a1a1a;
+    border-color: #2c2c2c;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .progress-bar,
+body.dark-theme .volume-progress {
+    background-color: #2c2c2c;
+}
+
+body.dark-theme .video-controls {
+    background-color: #1a1a1a;
+}
+
+body.dark-theme .project-thumb.active {
+    box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+body.dark-theme .btn.primary-btn {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+body.dark-theme .btn.primary-btn:hover {
+    color: var(--accent-color);
+}
+
+body.dark-theme .section-title::after {
+    background-color: var(--accent-color);
+}
+
+body.dark-theme .meta-label {
+    color: var(--accent-color);
+}
+
+body.dark-theme .expertise-group h3::after,
+body.dark-theme .expertise-list li::before,
+body.dark-theme .timeline-marker {
+    background-color: var(--accent-color);
+}
+
+body.dark-theme .play-icon {
+    background-color: rgba(150, 71, 52, 0.7);
+}
+
+/* Enhanced Project Page Dark Theme Styles */
+body.dark-theme .video-showcase::before {
+    background: linear-gradient(to bottom, rgba(var(--primary-color-rgb), 0.1), transparent);
+}
+
+body.dark-theme .project-info {
+    background-color: #1a1a1a;
+    border-color: #2c2c2c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .project-selector {
+    background-color: #1a1a1a;
+    border-color: #2c2c2c;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .video-selection-dropdown {
+    background-color: #2c2c2c;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-theme .video-selection-dropdown:hover,
+body.dark-theme .video-selection-dropdown:focus {
+    border-color: var(--primary-color);
+}
+
+body.dark-theme .video-preview-item {
+    background-color: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .video-preview-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .video-preview-item .video-title {
+    color: #e0e0e0;
+}
+
+body.dark-theme .project-thumb {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .project-thumb:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .project-thumb.active {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(var(--primary-color-rgb), 0.2);
+}
