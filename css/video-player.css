@@ -364,7 +364,11 @@
     top: 0;
     left: 0;
     z-index: 1;
-    border-radius: 8px;
+    background-color: #000;
+    border-radius: 12px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
 }
 
 /* Responsive styles */

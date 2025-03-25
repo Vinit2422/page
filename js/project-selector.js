@@ -213,18 +213,18 @@ const projectData = [
     },
     {
         id: 6,
-        title: "Digital art work",
-        description: "This project demonstrates sophisticated visual effects and graphics that combine dynamic motion and visual effects seamlessly to improve visual appeal and narrative. Every component is intended to enthrall and fascinate.",
-        category: "Digital-art-work",
-        software: "After Effects, Cinema 4D",
-        videos: [
+        title: "Digital Art",
+        description: "This project demonstrates sophisticated digital artwork and illustrations that showcase creativity and technical skill. Each piece is carefully crafted to convey unique artistic vision and storytelling.",
+        category: "Digital-art-works", // Updated to match HTML category
+        software: "Photoshop, Illustrator",
+        images: [
             {
                 src: "projects/Digital art work/1.jpeg",
-                title: "Project 1"
+                title: "Digital Artwork 1"
             },
             {
                 src: "projects/Digital art work/2.jpeg",
-                title: "Graphics"
+                title: "Digital Artwork 2"
             }
         ]
     }
@@ -300,7 +300,11 @@ function updateVideoSource(project) {
         existingOverlayImage.remove();
     }
 
-    if (content.src.endsWith('.mp4') || content.src.endsWith('.mov')) {
+    // Hide video controls and overlay for images
+    const videoControls = document.querySelector('.video-controls');
+    const videoOverlay = document.querySelector('.video-overlay');
+
+    if (content.src.match(/\.(mp4|mov)$/i)) {
         // Handle video files
         source.src = content.src;
         videoPlayer.poster = ''; // Clear any poster image
@@ -308,19 +312,20 @@ function updateVideoSource(project) {
         videoPlayer.style.display = 'block';
         
         // Show video controls
-        document.querySelector('.video-controls').style.display = 'flex';
-        document.querySelector('.video-overlay').style.display = 'flex';
+        if (videoControls) videoControls.style.display = 'flex';
+        if (videoOverlay) videoOverlay.style.display = 'flex';
         
-    } else if (content.src.endsWith('.jpeg') || content.src.endsWith('.png') || content.src.endsWith('.jpg')) {
+    } else if (content.src.match(/\.(jpeg|png|jpg)$/i)) {
         // Handle image files
         videoPlayer.style.display = 'none';
-        document.querySelector('.video-controls').style.display = 'none';
-        document.querySelector('.video-overlay').style.display = 'none';
+        if (videoControls) videoControls.style.display = 'none';
+        if (videoOverlay) videoOverlay.style.display = 'none';
         
-        // Create and append image element
+        // Create and append image element with proper path encoding
         const imageElement = document.createElement('div');
-        imageElement.className = 'image-overlay';
-        imageElement.style.backgroundImage = `url(${content.src})`;
+        // Encode the URL to handle spaces in the path
+        const encodedUrl = content.src.split('/').map(part => encodeURIComponent(part)).join('/');
+        imageElement.style.backgroundImage = `url('${encodedUrl}')`;
         imageElement.style.backgroundSize = 'contain';
         imageElement.style.backgroundPosition = 'center';
         imageElement.style.backgroundRepeat = 'no-repeat';
@@ -334,8 +339,9 @@ function updateVideoSource(project) {
 
     // Update video/image title if it exists
     const videoTitle = document.querySelector('.video-title');
-    if (videoTitle) {
+    if (videoTitle && content.title) {
         videoTitle.textContent = content.title;
+        videoTitle.style.display = 'block';
     }
 }
 
