@@ -280,139 +280,107 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
-/* Project Preview List Styles */
-.project-preview-section {
-    margin-top: 30px;
-    width: 100%;
-}
-
-.project-preview-section h3 {
-    font-family: var(--heading-font);
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--heading-color);
+/* Media Gallery Styles */
+.media-preview {
     position: relative;
-    padding-bottom: 10px;
-}
-
-.project-preview-section h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background-color: var(--primary-color);
-}
-
-.project-preview-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
     width: 100%;
-}
-
-.video-preview-item {
-    position: relative;
+    height: 120px;
+    margin-bottom: 15px;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: var(--bg-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
 }
 
-.video-preview-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.media-preview:hover {
+    transform: translateY(-3px);
 }
 
-.video-thumbnail, 
-.image-thumbnail {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-    transition: all 0.3s ease;
-}
-
-.video-preview-item:hover .video-thumbnail,
-.video-preview-item:hover .image-thumbnail {
-    opacity: 0.9;
-}
-
-.video-preview-item .video-title {
-    position: relative;
-    top: auto;
-    left: auto;
-    background: none;
-    padding: 10px;
-    font-family: var(--body-font);
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-align: center;
-    color: var(--text-color);
-    text-shadow: none;
-    border-radius: 0;
-}
-
-/* Image overlay for the main display */
-.image-overlay {
+.media-preview video,
+.media-preview img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+.media-preview.active {
+    border: 2px solid var(--primary-color);
+}
+
+/* Image display for non-video content */
+.image-display {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: #000;
-    border-radius: 12px;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
 }
 
-/* Responsive styles */
+/* Project preview section */
+.project-preview-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-color-alt);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-preview-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+    display: flex;
+    gap :10px;
+    /* flex-wrap: wrap; */
+}
+
+.project-preview-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.project-preview-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.project-preview-list::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+/* Navigation buttons */
+.media-nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.nav-button {
+    padding: 8px 16px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .play-icon {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .play-icon i {
-        font-size: 24px;
-    }
-    
-    .video-navigation {
-        padding: 0 10px;
-    }
-    
-    .video-navigation button {
-        width: 36px;
-        height: 36px;
+    .media-preview {
+        height: 100px;
     }
     
     .project-preview-list {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-    
-    .video-title {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .play-icon {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .play-icon i {
-        font-size: 20px;
-    }
-    
-    .video-title {
-        padding: 4px 8px;
-        font-size: 0.8rem;
+        max-height: 300px;
     }
 }

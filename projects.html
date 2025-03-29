@@ -47,8 +47,8 @@
             <div class="video-player-container">
                 <div class="custom-video-player" id="customVideoPlayer">
                     <div class="video-container">
-                        <video id="projectVideo" poster="projects/Animation/A1_Sanghvi_Vinit_Final.mov" preload="metadata">
-                            <source src="projects/Animation/A1_Sanghvi_Vinit_Final.mov" type="video/mp4">
+                        <video id="projectVideo">
+                            <source src="" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <div class="video-overlay">
@@ -56,57 +56,26 @@
                                 <i class="fas fa-play"></i>
                             </div>
                         </div>
-                        <div class="video-title"></div>
-                        <div class="video-description"></div>
-                        <div class="video-controls">
-                            <div class="progress-container">
-                                <div class="progress-bar">
-                                    <div class="progress-filled"></div>
-                                </div>
-                            </div>
-                            <div class="controls-row">
-                                <div class="left-controls"> 
-                                    <button class="play-pause-btn">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <div class="volume-container">
-                                        <button class="volume-btn">
-                                            <i class="fas fa-volume-up"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="project-info">
-                    <h2 id="projectTitle">3D Animation</h2>
-                    <p id="projectDescription">Discover the artistry of this expertly crafted 3D animation, where cutting-edge technology meets creative storytelling. With fluid motion, intricate detailing, and compelling visual effects, each frame offers a seamless narrative experience</p>
+                    <h2 id="projectTitle"></h2>
+                    <p id="projectDescription"></p>
                     <div class="project-meta">
                         <div class="meta-item">
                             <span class="meta-label">Category:</span>
-                            <span id="projectCategory">3D Animation</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Software:</span>
-                            <span id="projectSoftware">Maya, Blender</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label"></span>
-                            <select id="videoSelectionDropdown" class="video-selection-dropdown">
-                                <!-- Video options will be dynamically populated -->
-                            </select>
+                            <span id="projectCategory"></span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project Preview List -->
-                <div class="project-preview-section">
-                    <h3>Available Projects</h3>
-                    <div class="project-preview-list" id="videoPreviewList">
-                        <!-- Project previews will be dynamically populated here -->
-                    </div>
+            </div>
+
+            <!-- Project Preview List -->
+            <div class="project-preview-section">
+                <h3>Project Files</h3>
+                <div class="project-preview-list" id="videoPreviewList">
+                    <!-- Project previews will be dynamically populated here -->
                 </div>
             </div>
 
@@ -114,42 +83,7 @@
             <div class="project-selector">
                 <h3>Project Categories</h3>
                 <div class="project-thumbnails">
-                    <div class="project-thumb" data-project="1" data-category="2d-animation">
-                        <div class="thumb-overlay">
-                            <h4>2D Animation</h4>
-                            <p>Traditional and Digital 2D Animations</p>
-                        </div>
-                    </div>
-                    <div class="project-thumb active" data-project="2" data-category="3d-animation">
-                        <div class="thumb-overlay">
-                            <h4>3D Animation</h4>
-                            <p>Character and Scene Animations</p>
-                        </div>
-                    </div>
-                    <div class="project-thumb" data-project="3" data-category="lighting-texturing">
-                        <div class="thumb-overlay">
-                            <h4>Lighting & Texturing</h4>
-                            <p>3D Visual Development</p>
-                        </div>
-                    </div>
-                    <div class="project-thumb" data-project="4" data-category="sketches">
-                        <div class="thumb-overlay">
-                            <h4>Sketches</h4>
-                            <p>Traditional Art & Illustrations</p>
-                        </div>
-                    </div>
-                    <div class="project-thumb" data-project="5" data-category="vfx-motion">
-                        <div class="thumb-overlay">
-                            <h4>VFX & Motion Graphics</h4>
-                            <p>Visual Effects & Motion Design</p>
-                        </div>
-                    </div>
-                    <!-- <div class="project-thumb" data-project="6" data-category="Digital-art-works">
-                        <div class="thumb-overlay">
-                            <h4>Digital Art</h4>
-                            <p>Digital Illustrations & Designs</p>
-                        </div>
-                    </div> -->
+                    <!-- Categories will be dynamically populated here -->
                 </div>
             </div>
         </div>

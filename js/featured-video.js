@@ -1,4 +1,4 @@
-/**
+    /**
  * Featured Video Handler for CG Artist Portfolio
  * Controls Vimeo video behavior in the featured work section
  */
